@@ -52,51 +52,33 @@ const SchedulePage = () => (
     <Title>Class Schedule (Eastern Time)</Title>
     <ScheduleContainer>
       <ScheduleSection>
-        <ScheduleTitle>Mondays from 3:00pm to 5:00pm</ScheduleTitle>
+        <ScheduleTitle>Monday</ScheduleTitle>
         <ScheduleList>
-          <ScheduleItem>07-01</ScheduleItem>
-          <ScheduleItem>07-08</ScheduleItem>
-          <ScheduleItem>07-15</ScheduleItem>
-          <ScheduleItem>07-22</ScheduleItem>
-          <ScheduleItem>07-29</ScheduleItem>
-          <ScheduleItem>08-05</ScheduleItem>
-          <ScheduleItem>08-12</ScheduleItem>
+          <ScheduleItem>3:00PM - 4:00PM: Advanced Swim , Sharks , Guppy 1 , Free Swim , Private Lesson </ScheduleItem>
+          <ScheduleItem>4:00PM - 5:00PM: Adult (beginner) , Adult (intermediate) </ScheduleItem>
         </ScheduleList>
       </ScheduleSection>
       <ScheduleSection>
-        <ScheduleTitle>Fridays from 2:00pm to 4:00pm</ScheduleTitle>
+        <ScheduleTitle>Friday</ScheduleTitle>
         <ScheduleList>
-          <ScheduleItem>07-05</ScheduleItem>
-          <ScheduleItem>07-12</ScheduleItem>
-          <ScheduleItem>07-19</ScheduleItem>
-          <ScheduleItem>07-26</ScheduleItem>
-          <ScheduleItem>08-02</ScheduleItem>
-          <ScheduleItem>08-09</ScheduleItem>
-          <ScheduleItem>08-16</ScheduleItem>
+          <ScheduleItem>2:00PM - 3:00PM: Advanced Swim , Sharks , Guppy 2 , Free Swim , Private Lesson </ScheduleItem>
+          <ScheduleItem>3:00PM - 4:00PM: Minnow , Adult (beginner) , Adult (intermediate) , Private Lesson </ScheduleItem>
         </ScheduleList>
       </ScheduleSection>
       <ScheduleSection>
-        <ScheduleTitle>Saturdays from 8:00am to 12:00pm</ScheduleTitle>
+        <ScheduleTitle>Saturday</ScheduleTitle>
         <ScheduleList>
-          <ScheduleItem>07-06</ScheduleItem>
-          <ScheduleItem>07-13</ScheduleItem>
-          <ScheduleItem>07-20</ScheduleItem>
-          <ScheduleItem>07-27</ScheduleItem>
-          <ScheduleItem>08-03</ScheduleItem>
-          <ScheduleItem>08-10</ScheduleItem>
-          <ScheduleItem>08-17</ScheduleItem>
+          <ScheduleItem>8:00AM - 9:00AM: Advanced Swim , Adult (beginner) , Adult (intermediate) , Private Lesson </ScheduleItem>
+          <ScheduleItem>9:00AM - 10:00AM: Shark , Minnow , Free Swim , Guppy 2 , Private Lesson </ScheduleItem>
+          <ScheduleItem>10:00AM - 11:00AM: Baby+Me , Guppy 1 , Minnow </ScheduleItem>
+          <ScheduleItem>11:00AM - 12:00PM: Baby+Me , Guppy 1 , Guppy 2 </ScheduleItem>
         </ScheduleList>
       </ScheduleSection>
       <ScheduleSection>
-        <ScheduleTitle>Sundays from 11:00am to 1:00pm</ScheduleTitle>
+        <ScheduleTitle>Sunday</ScheduleTitle>
         <ScheduleList>
-          <ScheduleItem>07-07</ScheduleItem>
-          <ScheduleItem>07-14</ScheduleItem>
-          <ScheduleItem>07-21</ScheduleItem>
-          <ScheduleItem>07-28</ScheduleItem>
-          <ScheduleItem>08-04</ScheduleItem>
-          <ScheduleItem>08-11</ScheduleItem>
-          <ScheduleItem>08-18</ScheduleItem>
+          <ScheduleItem>11:00AM - 12:00PM: Guppy 1 , Minnow , Free Swim , Private Lesson </ScheduleItem>
+          <ScheduleItem>12:00PM - 1:00PM: Guppy 1 , Minnow , Free Swim , Private Lesson </ScheduleItem>
         </ScheduleList>
       </ScheduleSection>
     </ScheduleContainer>
