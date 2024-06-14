@@ -1,128 +1,176 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react";
+import { Link } from "gatsby";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Navbar from "../components/Navbar"; // Import the Navbar component
+import styled from "styled-components";
+import { StaticImage } from "gatsby-plugin-image"; // Import StaticImage
+import Gallery from "../components/Gallery"; // Import the Gallery component
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+// Styled components for the page
+const Title = styled.h1`
+  font-size: 2.5em;
+  text-align: center;
+  color: #66bdea; /* University Light Blue */
+  margin-top: 20px;
+`;
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
+const SectionTitle = styled.h2`
+  font-size: 2em;
+  text-align: center;
+  color: #66bdea; /* University Light Blue */
+  margin-top: 40px; /* Add extra margin-top for spacing */
+`;
 
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
+const Introduction = styled.p`
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 20px 0;
+  color: #333; /* Dark text for readability */
+  text-align: justify; /* Justify text alignment */
+`;
 
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
+const Location = styled.p`
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #f8c52b; /* University Yellow */
+  text-align: center; /* Center the location text */
+`;
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+const VideoLink = styled.div`
+  margin: 20px 0;
+  text-align: center;
+  a {
+    color: #66bdea; /* University Light Blue */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+`;
+
+const MapContainer = styled.div`
+  margin: 20px 0;
+  text-align: center;
+`;
+
+const LogoContainer = styled.div`
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000; /* Ensure it is on top of other elements */
+`;
+
+const SharksLogoContainer = styled.div`
+  position: fixed;
+  top: 20px;
+  right: 35px;
+  z-index: 1000; /* Ensure it is on top of other elements */
+`;
+
+const FormContainer = styled.div`
+  margin: 20px 0;
+  text-align: center;
+`;
+
+const FeedbackText = styled.p`
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin: 20px 0;
+  color: #333; /* Dark text for readability */
+  text-align: justify; /* Justify text alignment */
+`;
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
+    <SEO title="Home" />
+    <Navbar /> {/* Include the Navbar component */}
+    <LogoContainer>
+      <StaticImage 
+        src="../images/CA_DAY_logo_no_triangle.png" 
+        alt="Company Logo" 
+        width={200} // Set the width to 200px
       />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text} ↗
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+    </LogoContainer>
+    <SharksLogoContainer>
+      <StaticImage 
+        src="../images/4510_liu_sharks-primary-2019.png" 
+        alt="Sharks Logo" 
+        width={200} // Set the width to 200px
+      />
+    </SharksLogoContainer>
+    <Title>LIU Children's Academy Swim Lessons</Title>
+    <Introduction>
+      From Saturday, July 4th through August 18, 2024, LIU Children's Academy is excited to offer a comprehensive morning swim program for children aged 8 months and older. Our program is designed to teach essential swimming skills, build confidence, and ensure a fun learning experience for all participants.
+    </Introduction>
+    <Introduction>
+      Classes will be held in one of Brooklyn's premier swimming facilities, providing an optimal environment for swimmers of all levels. To ensure personalized and effective instruction, children will be grouped according to their experience and skill level.
+    </Introduction>
+    <Introduction>
+      Our team of swim instructors comprises Division I athletes who bring a wealth of experience, exceptional patience, and a proven track record of achieving results. For the past 14 years, LIU Children's Academy has been recognized for offering the finest swimming classes in Brooklyn.
+    </Introduction>
+    <Introduction>
+      Join us for a summer of skill-building, confidence-boosting, and enjoyable swimming lessons!
+    </Introduction>
+    <SectionTitle>Location</SectionTitle>
+    <Location>
+      STEINBERG WELLNESS CENTER, 161 Ashland Place, Brooklyn, NY 11201
+    </Location>
+    <VideoLink>
+      <p>Watch the video to see how to access the pool through the required entrance:</p>
+      <a href="https://youtu.be/46OFEB7zsE0" target="_blank" rel="noopener noreferrer">
+        Access Video
+      </a>
+    </VideoLink>
+    <MapContainer>
+      <p>Find us on the map:</p>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.9999999999995!2d-73.97899999999999!3d40.690999999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a19b0b0b0b0%3A0x0!2sSteinberg%20Wellness%20Center!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+        width="600"
+        height="450"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        title="Steinberg Wellness Center"
+      ></iframe>
+    </MapContainer>
+    <SectionTitle>Gallery</SectionTitle>
+    <Gallery /> {/* Include the Gallery component */}
+
+    {/* Add two lines of space */}
+    <br />
+    <br />
+
+    <SectionTitle>Feedback</SectionTitle>
+    <FeedbackText>
+      We value your input on our Swimming Program at LIU Children's Academy. Please take a few minutes to share your thoughts on the quality of instruction, your child's progress, facility cleanliness, and overall experience. Your feedback will help us improve and provide a better experience for all participants. Thank you for your time and insights!
+    </FeedbackText>
+    <FormContainer>
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLScv8RCeLPSR2eFIhRjReJ-Drnmlz1fw4Zqn1YgF2k78hCS_6A/viewform?embedded=true"
+        width="640"
+        height="800"
+        frameBorder="0"
+        marginHeight="0"
+        marginWidth="0"
+        title="Google Form"
+      >
+        Loading…
+      </iframe>
+    </FormContainer>
   </Layout>
-)
+);
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
-export const Head = () => <Seo title="Home" />
+export default IndexPage;
 
-export default IndexPage
+
+
+
+
+
+
+
+
+
