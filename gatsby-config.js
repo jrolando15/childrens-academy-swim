@@ -36,7 +36,9 @@ module.exports = {
         rules: ['fonts', 'images', 'media'],
       },
     },
+    `gatsby-plugin-netlify`, // Added the new plugin here
   ],
 };
+
 
 
