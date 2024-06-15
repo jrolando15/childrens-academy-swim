@@ -103,7 +103,7 @@ const IndexPage = () => (
     </SharksLogoContainer>
     <Title>LIU Children's Academy Swim Lessons</Title>
     <Introduction>
-      From Saturday, July 4th through August 18, 2024, LIU Children's Academy is excited to offer a comprehensive morning swim program for children aged 8 months and older. Our program is designed to teach essential swimming skills, build confidence, and ensure a fun learning experience for all participants.
+      From Saturday, July 1th through August 18, 2024, LIU Children's Academy is excited to offer a comprehensive morning swim program for anyone aged 8 months and older. Our program is designed to teach essential swimming skills, build confidence, and ensure a fun learning experience for all participants.
     </Introduction>
     <Introduction>
       Classes will be held in one of Brooklyn's premier swimming facilities, providing an optimal environment for swimmers of all levels. To ensure personalized and effective instruction, children will be grouped according to their experience and skill level.
