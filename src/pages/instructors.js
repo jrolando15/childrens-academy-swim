@@ -190,7 +190,7 @@ const instructors = [
     question: "If she could swim alongside any aquatic creature, real or mythical? Swimming with a manta ray would be a dream come true. Manta rays are some of the biggest ocean animals, and she thinks it would be so cool to swim alongside one.",
     image: (
       <StaticImage
-        src="../images/Charlotte.png"
+        src="../images/charlotte.png"
         alt="Charlotte Jones"
         width={250}
         height={250}
