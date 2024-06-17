@@ -231,7 +231,7 @@ const instructors = [
     question: "If he could swim alongside any aquatic creature, real or mythical? If the chance arises, he would love to swim with dolphins because they make him feel safe.",
     image: (
       <StaticImage
-        src="../images/vanja_resize.jpeg"
+        src="../images/Vanja.jpg"
         alt="Charlie Wallace"
         width={250}
         height={250}
