@@ -60,14 +60,40 @@ const LogoContainer = styled.div`
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 1000; /* Ensure it is on top of other elements */
+  z-index: 1000;
+  width: 15vw;
+  max-width: 200px;
+  min-width: 100px;
+
+  @media (max-width: 768px) {
+    width: 20vw;
+    min-width: 80px;
+  }
+
+  @media (max-width: 480px) {
+    width: 25vw;
+    min-width: 60px;
+  }
 `;
 
 const SharksLogoContainer = styled.div`
   position: fixed;
   top: 20px;
   right: 35px;
-  z-index: 1000; /* Ensure it is on top of other elements */
+  z-index: 1000;
+  width: 15vw;
+  max-width: 200px;
+  min-width: 100px;
+
+  @media (max-width: 768px) {
+    width: 20vw;
+    min-width: 80px;
+  }
+
+  @media (max-width: 480px) {
+    width: 25vw;
+    min-width: 60px;
+  }
 `;
 
 const FormContainer = styled.div`
@@ -86,12 +112,13 @@ const FeedbackText = styled.p`
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Navbar /> {/* Include the Navbar component */}
+    <Navbar />
     <LogoContainer>
       <StaticImage 
         src="../images/CA_DAY_logo_no_triangle.png" 
         alt="Company Logo" 
-        width={200} // Set the width to 200px
+        layout="fullWidth"
+        placeholder="blurred"
       />
     </LogoContainer>
     <SharksLogoContainer>
@@ -103,7 +130,7 @@ const IndexPage = () => (
     </SharksLogoContainer>
     <Title>LIU Children's Academy Swim Lessons</Title>
     <Introduction>
-      From Saturday, July 1th through August 18, 2024, LIU Children's Academy is excited to offer a comprehensive morning swim program for anyone aged 8 months and older. Our program is designed to teach essential swimming skills, build confidence, and ensure a fun learning experience for all participants.
+      From Saturday, July 4th through August 18, 2024, LIU Children's Academy is excited to offer a comprehensive morning swim program for children aged 8 months and older. Our program is designed to teach essential swimming skills, build confidence, and ensure a fun learning experience for all participants.
     </Introduction>
     <Introduction>
       Classes will be held in one of Brooklyn's premier swimming facilities, providing an optimal environment for swimmers of all levels. To ensure personalized and effective instruction, children will be grouped according to their experience and skill level.
@@ -164,6 +191,7 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
 
 
 
