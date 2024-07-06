@@ -26,7 +26,8 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
+        {/* Remove or comment out the footer */}
+        {/* <footer
           style={{
             marginTop: `2rem`,
           }}
@@ -34,7 +35,7 @@ const Layout = ({ children }) => {
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        </footer> */}
       </div>
     </>
   )
@@ -45,4 +46,3 @@ Layout.propTypes = {
 }
 
 export default Layout
-
