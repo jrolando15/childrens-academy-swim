@@ -3,6 +3,7 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // Styled component for the gallery container
 const GalleryContainer = styled.div`
@@ -31,9 +32,23 @@ const Gallery = () => {
   }));
 
   return (
-    <GalleryContainer>
-      <ImageGallery items={images} />
-    </GalleryContainer>
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          <GalleryContainer>
+            <ImageGallery 
+              items={images} 
+              showPlayButton={false}
+              showFullscreenButton={true}
+              showNav={true}
+              showThumbnails={true}
+              thumbnailPosition="bottom"
+              className="img-fluid"
+            />
+          </GalleryContainer>
+        </div>
+      </div>
+    </div>
   );
 };
 
