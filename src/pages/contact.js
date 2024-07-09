@@ -1,15 +1,14 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Navbar from "../components/Navbar" // Import the Navbar component
 import styled from "styled-components"
 
 // Styled components for the page
 const Title = styled.h1`
   font-size: 2.5em;
   text-align: center;
-  color: #66bdea; /* University Light Blue */
-  margin-top: 20px;
+  color: #0d6efd; /* Bootstrap primary color (mt-5) */
+  margin-top: 3rem; /* Equivalent to mt-5 */
 `
 
 const ContactContainer = styled.div`
@@ -26,7 +25,7 @@ const ContactInfo = styled.div`
 `
 
 const ContactLink = styled.a`
-  color: #66bdea; /* University Light Blue */
+  color: #0d6efd; /* Bootstrap primary color */
   text-decoration: none;
   font-weight: bold;
 
@@ -35,25 +34,32 @@ const ContactLink = styled.a`
   }
 `
 
+const JustifiedText = styled.p`
+  text-align: center; /* Center the text */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: black;
+`
+
 const ContactPage = () => (
   <Layout>
     <SEO title="Contact" />
-    <Navbar /> {/* Include the Navbar component */}
     <Title>Contact Us</Title>
     <ContactContainer>
-      <p>Reach out to us through the following ways:</p>
+      <JustifiedText>Reach out to us through the following ways:</JustifiedText>
       <ContactInfo>
-        <p>Phone: 718.780.6025</p>
-        <p>Fax: 718.780.6086</p>
-        <p>Email: <ContactLink href="mailto:ChildrensAcademy@liu.edu">ChildrensAcademy@liu.edu</ContactLink></p>
+        <JustifiedText>Phone: 718.780.6025</JustifiedText>
+        <JustifiedText>Fax: 718.780.6086</JustifiedText>
+        <JustifiedText>Email: <ContactLink href="mailto:ChildrensAcademy@liu.edu">ChildrensAcademy@liu.edu</ContactLink></JustifiedText>
       </ContactInfo>
-      <p>To know more about us:</p>
-      <p>
+      <JustifiedText>To know more about us:</JustifiedText>
+      <JustifiedText>
         Web: <ContactLink href="https://www.LIU.edu/childrensacademy" target="_blank" rel="noopener noreferrer">www.LIU.edu/childrensacademy</ContactLink>
-      </p>
-      <p>
+      </JustifiedText>
+      <JustifiedText>
         Link regarding registration: <ContactLink href="https://childrensacademy.liu.edu/" target="_blank" rel="noopener noreferrer">Register</ContactLink>
-      </p>
+      </JustifiedText>
     </ContactContainer>
   </Layout>
 )
