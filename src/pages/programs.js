@@ -8,7 +8,7 @@ import styled from "styled-components"
 const Title = styled.h1`
   font-size: 2.5em;
   text-align: center;
-  color: #66bdea; /* University Light Blue */
+  color: #0d6efd; /* University Light Blue */
   margin-top: 20px;
 `
 
@@ -31,7 +31,6 @@ const ProgramDescription = styled.p`
 const ProgramsPage = () => (
   <Layout>
     <SEO title="Programs" />
-    <Navbar /> {/* Include the Navbar component */}
     <Title>Swim Programs</Title>
     <Section>
       <ProgramTitle>Baby and Me Classes</ProgramTitle>
@@ -72,7 +71,7 @@ const ProgramsPage = () => (
     <Section>
       <ProgramTitle>Specialized Class</ProgramTitle>
       <ProgramDescription>
-        <strong>Advanced Swimming:</strong> Designed for swimmers aiming to compete or significantly improve their swimming skills. Focuses on advanced stroke refinement, developing speed and endurance, and mastering competitive techniques such as starts, turns, and finishes.<strong>Price: $55 for 55 minutes.</strong>
+        <strong>Advanced Swimming:</strong> Designed for swimmers aiming to compete or significantly improve their swimming skills. Focuses on advanced stroke refinement, developing speed and endurance, and mastering competitive techniques such as starts, turns, and finishes. Swimmers will undergo rigorous training sessions that mimic competitive swimming environments to prepare them for meets and competitions. <strong>Price: $55 for 55 minutes.</strong>
       </ProgramDescription>
     </Section>
     <Section>
@@ -84,14 +83,13 @@ const ProgramsPage = () => (
     <Section>
       <ProgramTitle>Private Lessons</ProgramTitle>
       <ProgramDescription>
-        <strong>Private Lessons:</strong> This one-on-one session is tailored for both kids and adults, providing personalized instruction for 45 minutes. One of our certified instructors will work closely with the student to focus on specific techniques and approaches for the swimming strokes they aim to improve. The individualized attention ensures that each lesson is customized to the student's unique needs and goals, whether they are beginners looking to build confidence in the water or advanced swimmers seeking to refine their technique and increase their efficiency. <strong>Price: $70 for 45 minutes.</strong>
+        <strong>Private Lessons:</strong> This one-on-one session is tailored for both kids and adults, providing personalized instruction for an entire hour. One of our certified instructors will work closely with the student to focus on specific techniques and approaches for the swimming strokes they aim to improve. The individualized attention ensures that each lesson is customized to the student's unique needs and goals, whether they are beginners looking to build confidence in the water or advanced swimmers seeking to refine their technique and increase their efficiency. <strong>Price: $70 for 60 minutes.</strong>
       </ProgramDescription>
     </Section>
   </Layout>
 )
 
 export default ProgramsPage
-
 
 
 
