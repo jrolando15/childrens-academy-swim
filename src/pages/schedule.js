@@ -1,7 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Navbar from "../components/Navbar" // Import the Navbar component
 import styled from "styled-components"
 
 // Styled components for the page
