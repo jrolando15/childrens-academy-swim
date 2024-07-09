@@ -8,7 +8,7 @@ import styled from "styled-components"
 const Title = styled.h1`
   font-size: 2.5em;
   text-align: center;
-  color: #66bdea; /* University Light Blue */
+  color: #0d6efd; /* University Light Blue */
   margin-top: 20px;
 `
 
@@ -48,7 +48,6 @@ const ScheduleItem = styled.li`
 const SchedulePage = () => (
   <Layout>
     <SEO title="Schedule" />
-    <Navbar /> {/* Include the Navbar component */}
     <Title>Class Schedule (Eastern Time)</Title>
     <ScheduleContainer>
       <ScheduleSection>
