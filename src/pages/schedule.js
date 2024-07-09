@@ -48,7 +48,6 @@ const ScheduleItem = styled.li`
 const SchedulePage = () => (
   <Layout>
     <SEO title="Schedule" />
-    <Navbar /> {/* Include the Navbar component */}
     <Title>Class Schedule (Eastern Time)</Title>
     <ScheduleContainer>
       <ScheduleSection>
