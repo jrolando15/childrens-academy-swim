@@ -1,17 +1,16 @@
-import React, { useState } from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Navbar from "../components/Navbar" // Import the Navbar component
-import styled from "styled-components"
-import { StaticImage } from "gatsby-plugin-image" // Import StaticImage
+import React, { useState } from "react";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import styled from "styled-components";
+import { StaticImage } from "gatsby-plugin-image";
 
 // Styled components for the page
 const Title = styled.h1`
   font-size: 2.5em;
   text-align: center;
-  color: #66bdea; /* University Light Blue */
+  color: #0d6efd; /* University Light Blue */
   margin-top: 20px;
-`
+`;
 
 const InstructorList = styled.ul`
   list-style: none;
@@ -20,14 +19,14 @@ const InstructorList = styled.ul`
   display: flex;
   flex-wrap: wrap; /* Allows wrapping to the next line if there are too many buttons */
   justify-content: center; /* Centers the buttons horizontally */
-`
+`;
 
 const InstructorItem = styled.li`
   margin: 10px;
-`
+`;
 
 const InstructorButton = styled.button`
-  background-color: #66bdea; /* University Light Blue */
+  background-color: #0d6efd; /* University Light Blue */
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -39,7 +38,7 @@ const InstructorButton = styled.button`
   &:hover {
     background-color: #005f8d; /* Darker shade of blue */
   }
-`
+`;
 
 const InstructorBio = styled.div`
   margin: 20px 0;
@@ -48,27 +47,29 @@ const InstructorBio = styled.div`
   border: 1px solid #ddd;
   border-radius: 8px;
   text-align: justify; /* Justify text alignment */
-`
+`;
 
-const QuestionSection = styled.div`
-  margin-top: 20px;
-  font-weight: bold;
-  color: #005f8d; /* Darker shade of blue */
-`
+const JustifiedText = styled.p`
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+`;
 
-const InstructorDetails = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-`
+const QuestionText = styled.p`
+  text-align: justify;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #0d6efd; /* Color for the question text */
+`;
 
 const instructors = [
   {
     name: "Jose Alfonzo",
     bio: [
-      "Jose Alfonzo hails from Lecheria, Anzoategui, Venezuela. He learned to swim when he was 4 years old while in a summer team in his county. He made the Venezuelan national team in open water for the Caribbean Games in Aruba 2018. He is especially proud of his open water crew back in Venezuela and last year's conference with LIU. His favorite swimming stroke is Freestyle. He loves to teach swimming because he loves to share his passion for the water and be able to see other people get comfortable in water. Through swimming, he has learned the value of having a routine, being disciplined and having a passion for the sport. He applies these values to his teaching.",
-      "Previously, he worked as a volunteer assistant coach for the Marlins swim club, a summer team in Edwardsville. He has also worked as a swim instructor at LIU since 2023 for kids from 3 years old to teenagers. His advice: Don't overthink it, the water is a second house for you, first control your breathing and then execute. He is completing a double major in Artificial Intelligence/Robotics and Computer Science. He loves math and physics and looks forward to developing new software development and other technologies in the future.",
-      "When he graduates, he may return to Venezuela or move to California where the weather is warm all year around and he can swim outdoors. Aside from swimming, he loves programming, working out at the gym, playing/watching sports in general (like soccer) and listening to music."
+      "Jose Alfonzo hails from Lecheria, Anzoategui, Venezuela. He learned to swim when he was 4 years old while in a summer team in his county. He made the Venezuelan national team in open water for the Caribbean Games in Aruba 2018. He is especially proud of his open water crew back in Venezuela and last year's conference with LIU. His favorite swimming stroke is Freestyle. He loves to teach swimming because he loves to share his passion for the water and be able to see other people get comfortable in water. Through swimming, he has learned the value of having a routine, discipline, and perseverance.",
+      "Aside from swimming, he loves programming, working out at the gym, playing/watching sports in general (like soccer), and listening to music."
     ],
     question: "If he could swim alongside any aquatic creature, real or mythical? It would be to swim alongside a Megalodon, just to chill out with him.",
     image: (
@@ -77,9 +78,9 @@ const instructors = [
         alt="Jose Alfonzo"
         width={250}
         height={250}
-        style={{ borderRadius: '50%', marginRight: '5px' }}
+        style={{ borderRadius: '50%' , marginRight: '20px'}}
       />
-    )
+    ) 
   },
   {
     name: "Brynjólfur Óli Karlsson",
@@ -231,53 +232,49 @@ const instructors = [
     question: "If he could swim alongside any aquatic creature, real or mythical? If the chance arises, he would love to swim with dolphins because they make him feel safe.",
     image: (
       <StaticImage
-        src="../images/Vanja.jpg"
-        alt="Charlie Wallace"
+        src="../images/Vanja.png"
+        alt="Vanja Petrasinovic"
         width={250}
         height={250}
         style={{ borderRadius: '50%', marginRight: '20px' }}
       />
     )
   },
-  ]
-  
-  const InstructorsPage = () => {
-    const [selectedInstructor, setSelectedInstructor] = useState(null)
-  
-    const handleInstructorClick = (instructor) => {
-      setSelectedInstructor(instructor)
-    }
-  
-    return (
-      <Layout>
-        <SEO title="Instructors" />
-        <Navbar />
-        <Title>Meet Our Instructors</Title>
-        <InstructorList>
-          {instructors.map((instructor, index) => (
-            <InstructorItem key={index}>
-              <InstructorButton onClick={() => handleInstructorClick(instructor)}>
-                {instructor.name}
-              </InstructorButton>
-            </InstructorItem>
+
+];
+
+const InstructorsPage = () => {
+  const [selectedInstructor, setSelectedInstructor] = useState(null);
+
+  const handleInstructorClick = (instructor) => {
+    setSelectedInstructor(instructor);
+  };
+
+  return (
+    <Layout>
+      <SEO title="Meet Our Instructors" />
+      <Title>Meet Our Instructors</Title>
+      <InstructorList>
+        {instructors.map((instructor, index) => (
+          <InstructorItem key={index}>
+            <InstructorButton onClick={() => handleInstructorClick(instructor)}>
+              {instructor.name}
+            </InstructorButton>
+          </InstructorItem>
+        ))}
+      </InstructorList>
+      {selectedInstructor && (
+        <InstructorBio>
+          {selectedInstructor.image}
+          <h2>{selectedInstructor.name}</h2>
+          {selectedInstructor.bio.map((paragraph, index) => (
+            <JustifiedText key={index}>{paragraph}</JustifiedText>
           ))}
-        </InstructorList>
-        {selectedInstructor && (
-          <InstructorBio>
-            <InstructorDetails>
-              {selectedInstructor.image}
-              <h2>{selectedInstructor.name}</h2>
-            </InstructorDetails>
-            {selectedInstructor.bio.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-            <QuestionSection>
-              <p>{selectedInstructor.question}</p>
-            </QuestionSection>
-          </InstructorBio>
-        )}
-      </Layout>
-    )
-  }
-  
-  export default InstructorsPage
+          <QuestionText><strong>Question:</strong> {selectedInstructor.question}</QuestionText>
+        </InstructorBio>
+      )}
+    </Layout>
+  );
+};
+
+export default InstructorsPage;
