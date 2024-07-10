@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Gallery from "../components/Gallery_2";
 import styled from "styled-components";
-import Navbar from "../components/Navbar";
+
 
 const JustifiedText = styled.p`
   text-align: justify;
